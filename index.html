@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#0f172a" />
+
+    <!-- Primary SEO -->
+    <title>
+      Storage Trust System for Self-Storage Facilities | Altitude Interactive
+    </title>
+    <meta
+      name="description"
+      content="Altitude Interactive helps self-storage facilities turn online trust into more move-ins with a simple Google reviews + profile visibility system."
+    />
+    <link rel="canonical" href="https://getmaxaltitude.com/" />
+    <meta name="robots" content="index,follow,max-image-preview:large" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Altitude Interactive" />
+    <meta
+      property="og:title"
+      content="Storage Trust System for Self-Storage Facilities"
+    />
+    <meta
+      property="og:description"
+      content="Turn online trust into more move-ins with a simple Google reviews + profile visibility system."
+    />
+    <meta property="og:url" content="https://getmaxaltitude.com/" />
+    <meta
+      property="og:image"
+      content="https://getmaxaltitude.com/og-image.png"
+    />
+    <meta
+      property="og:image:alt"
+      content="Altitude Interactive - Storage Trust System"
+    />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <style>
+      :root {
+        --ink: #0f172a;
+        --muted: rgba(15, 23, 42, 0.74);
+        --line: rgba(15, 23, 42, 0.12);
+        --soft: rgba(15, 23, 42, 0.04);
+        --max: 1100px;
+        --pad: 22px;
+        --radius: 16px;
+
+        /* Brand */
+        --brand: #7617f3;
+        --brand2: #9a1ef0;
+        --brand-ink: #3b0aa6;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+      body {
+        margin: 0;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          Helvetica, Arial, sans-serif;
+        color: var(--ink);
+        line-height: 1.55;
+        background: #fff;
+      }
+      a {
+        color: inherit;
+      }
+      .wrap {
+        max-width: var(--max);
+        margin: 0 auto;
+        padding: 0 var(--pad);
+      }
+      .muted {
+        color: var(--muted);
+      }
+
+      /* Header */
+      .topbar {
+        position: sticky;
+        top: 0;
+        z-index: 20;
+        background: rgba(255, 255, 255, 0.92);
+        backdrop-filter: blur(10px);
+        border-bottom: 1px solid var(--line);
+      }
+      .topbar .wrap {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+        padding: 14px var(--pad);
+      }
+      .brand {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        min-width: 0;
+      }
+      .brand img {
+        height: 46px; /* bigger logo */
+        width: auto;
+        display: block;
+      }
+      .product-pill {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        font-size: 12px;
+        font-weight: 750;
+        padding: 8px 12px;
+        border-radius: 999px;
+        border: 1px solid rgba(118, 23, 243, 0.25);
+        background: linear-gradient(
+          90deg,
+          rgba(118, 23, 243, 0.12),
+          rgba(154, 30, 240, 0.08)
+        );
+        color: var(--brand-ink);
+        white-space: nowrap;
+      }
+
+      /* Buttons */
+      .btn {
+        padding: 12px 16px;
+        border-radius: 12px;
+        border: 1px solid var(--line);
+        text-decoration: none;
+        font-weight: 750;
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        background: #fff;
+      }
+      .btn.primary {
+        background: linear-gradient(90deg, var(--brand), var(--brand2));
+        color: #fff;
+        border-color: transparent;
+        box-shadow: 0 10px 22px rgba(118, 23, 243, 0.2);
+      }
+      .btn.ghost {
+        background: #fff;
+      }
+
+      /* Hero */
+      header.hero {
+        padding: 64px 0 34px;
+        position: relative;
+        overflow: hidden;
+
+        /* The key fix: the background effect belongs to the hero itself */
+        background: radial-gradient(
+            circle at 18% 35%,
+            rgba(118, 23, 243, 0.16),
+            transparent 55%
+          ),
+          radial-gradient(
+            circle at 75% 10%,
+            rgba(154, 30, 240, 0.12),
+            transparent 58%
+          ),
+          linear-gradient(180deg, rgba(15, 23, 42, 0), rgba(15, 23, 42, 0));
+      }
+      .system-name {
+        color: var(--brand-ink);
+        font-weight: 800;
+      }
+
+      .hero-inner {
+        position: relative;
+      }
+      .accent-line {
+        height: 4px;
+        width: 90px;
+        border-radius: 999px;
+        background: linear-gradient(90deg, var(--brand), var(--brand2));
+        margin: 0 0 14px;
+      }
+      h1 {
+        font-size: 46px;
+        line-height: 1.08;
+        margin: 0 0 12px;
+        letter-spacing: -0.6px;
+        max-width: 24ch;
+      }
+      .lead {
+        font-size: 18px;
+        color: var(--muted);
+        max-width: 74ch;
+        margin: 0 0 18px;
+      }
+      .cta-row {
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+        margin-top: 8px;
+      }
+      .pills {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 18px;
+      }
+      .pill {
+        font-size: 12px;
+        padding: 8px 10px;
+        border: 1px solid var(--line);
+        border-radius: 999px;
+        background: #fff;
+        color: rgba(15, 23, 42, 0.85);
+      }
+
+      /* Sections */
+      .section {
+        padding: 28px 0;
+      }
+      .section.alt {
+        background: var(--soft);
+        border-top: 1px solid rgba(15, 23, 42, 0.06);
+        border-bottom: 1px solid rgba(15, 23, 42, 0.06);
+      }
+      .grid2 {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+      }
+      .grid3 {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 16px;
+      }
+      .card {
+        border: 1px solid var(--line);
+        border-radius: var(--radius);
+        padding: 18px;
+        background: #fff;
+      }
+      .card h3 {
+        margin: 0 0 8px;
+        font-size: 16px;
+      }
+      .card p {
+        margin: 0;
+      }
+
+      footer {
+        padding: 30px 0 46px;
+        border-top: 1px solid var(--line);
+      }
+
+      @media (max-width: 900px) {
+        h1 {
+          font-size: 38px;
+        }
+        .grid2,
+        .grid3 {
+          grid-template-columns: 1fr;
+        }
+        .brand img {
+          height: 42px;
+        }
+        .product-pill {
+          display: none;
+        } /* optional: hides pill on small screens to keep header clean */
+      }
+    </style>
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Altitude Interactive",
+        "url": "https://getmaxaltitude.com/",
+        "brand": { "@type": "Brand", "name": "Storage Trust System" },
+        "description": "We help self-storage facilities maintain trust on Google so renters choose them confidently."
+      }
+    </script>
+  </head>
+
+  <body>
+    <div id="app">
+      <!-- Header -->
+      <div class="topbar">
+        <div class="wrap">
+          <div class="brand">
+            <img
+              src="assets/altitude_interactive_full_logo.png"
+              alt="Altitude Interactive"
+            />
+          </div>
+
+          <a class="btn primary" href="#cta">Request a Quick Review</a>
+        </div>
+      </div>
+
+      <!-- Hero -->
+      <header class="hero">
+        <div class="wrap hero-inner">
+          <div class="accent-line"></div>
+          <h1>
+            <span class="system-name">Storage Trust System:</span> Turn online
+            trust into more move-ins.
+          </h1>
+          <p class="lead">
+            We help self-storage facilities quietly maintain trust on Google so
+            renters choose you confidently before they ever call.
+          </p>
+
+          <div class="cta-row">
+            <a class="btn primary" href="#cta">Request a Quick Review</a>
+            <a class="btn ghost" href="#how">How it works</a>
+          </div>
+
+          <div class="pills" aria-label="Highlights">
+            <span class="pill">Fully remote</span>
+            <span class="pill">No ads</span>
+            <span class="pill">Low staff effort</span>
+            <span class="pill">Built for 1–10 location operators</span>
+          </div>
+        </div>
+      </header>
+      <div style="height: 10px"></div>
+      <!-- Problem -->
+      <section class="section">
+        <div class="wrap grid3">
+          <div class="card">
+            <h3>Inconsistent reviews</h3>
+            <p class="muted">
+              Reviews come in bursts, then go quiet—eroding trust.
+            </p>
+          </div>
+          <div class="card">
+            <h3>Unclear Google profiles</h3>
+            <p class="muted">
+              Categories, services, and photos don’t reflect what you actually
+              offer.
+            </p>
+          </div>
+          <div class="card">
+            <h3>Missed confidence moments</h3>
+            <p class="muted">
+              Renters decide before calling. Trust gaps lose move-ins silently.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- How it works -->
+      <section id="how" class="section alt">
+        <div class="wrap grid2">
+          <div class="card">
+            <h3>1) Quick review</h3>
+            <p class="muted">
+              We look at your Google presence and show you what we see.
+            </p>
+          </div>
+          <div class="card">
+            <h3>2) Implement the system</h3>
+            <p class="muted">
+              Review capture + profile clarity, done once and maintained.
+            </p>
+          </div>
+          <div class="card">
+            <h3>3) Maintain trust</h3>
+            <p class="muted">We keep it consistent so trust doesn’t slip.</p>
+          </div>
+          <div class="card">
+            <h3>4) Optional conversion layer</h3>
+            <p class="muted">Missed-call text-back and trust → rental flow.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA -->
+      <section id="cta" class="section">
+        <div class="wrap card">
+          <h2 style="margin: 0 0 8px">Request a Quick Review</h2>
+          <p class="muted" style="margin: 0 0 14px; max-width: 85ch">
+            We’ll review your Google presence and share a short, practical
+            assessment. If it’s not a fit, you’ll still walk away with clarity.
+          </p>
+
+          <div class="cta-row">
+            <a class="btn primary" :href="calendlyUrl"
+              >Book a 15-minute review</a
+            >
+            <a class="btn ghost" :href="mailtoLink">Email instead</a>
+          </div>
+
+          <p class="muted" style="margin: 12px 0 0; font-size: 12px">
+            Business hours only. No weekends expected.
+          </p>
+        </div>
+      </section>
+
+      <!-- Footer -->
+      <footer>
+        <div class="wrap">
+          <small class="muted"
+            >© {{ new Date().getFullYear() }} Altitude Interactive</small
+          >
+        </div>
+      </footer>
+    </div>
+
+    <script src="https://unpkg.com/vue@3/dist/vue.global.prod.js"></script>
+    <script>
+      const { createApp } = Vue;
+      createApp({
+        data() {
+          return {
+            calendlyUrl: "YOUR_CALENDLY_URL",
+            email: "ben@getmaxaltitude.com",
+          };
+        },
+        computed: {
+          mailtoLink() {
+            const subject = encodeURIComponent("Quick Review Request");
+            return `mailto:${this.email}?subject=${subject}`;
+          },
+        },
+      }).mount("#app");
+    </script>
+  </body>
+</html>
